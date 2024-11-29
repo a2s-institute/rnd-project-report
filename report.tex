@@ -20,6 +20,12 @@
 \usepackage{algpseudocode}
 \usepackage{siunitx}
 \usepackage[framemethod=TikZ]{mdframed}
+\usepackage[acronym,automake]{glossaries-extra}
+
+\setabbreviationstyle[acronym]{long-short}
+\subfile{subfiles/acronyms}
+\makeglossaries{}
+
 
 \mdfdefinestyle{frameStyle}{%
 	roundcorner=5pt,
@@ -76,6 +82,7 @@ Write up to three keywords about your work.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+\printglossary[type=\acronymtype]
 
 \subfile{subfiles/acknowledgement}
 \subfile{subfiles/statement_of_originality}
